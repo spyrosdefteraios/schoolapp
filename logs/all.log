@@ -1,0 +1,227 @@
+2026-03-12 16:33:37 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+ 2026-03-12 16:33:37 INFO  g.a.c.s.SchoolappApplicationTests - Starting SchoolappApplicationTests using Java 21.0.8 with PID 18436 (started by 30698 in C:\Users\30698\IdeaProjects\schoolapp)
+ 2026-03-12 16:33:37 INFO  g.a.c.s.SchoolappApplicationTests - The following 1 profile is active: "dev"
+ 2026-03-12 16:33:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2026-03-12 16:33:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 102 ms. Found 5 JPA repository interfaces.
+ 2026-03-12 16:33:41 INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/school9ssr?useSSL=true&serverTimezone=UTC (MySQL 8.0)
+ 2026-03-12 16:33:42 INFO  o.f.c.i.s.JdbcTableSchemaHistory - Schema history table `school9ssr`.`flyway_schema_history` does not exist yet
+ 2026-03-12 16:33:42 INFO  o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.071s)
+ 2026-03-12 16:33:42 INFO  org.flywaydb.core.Flyway - All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+ 2026-03-12 16:33:42 INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table `school9ssr`.`flyway_schema_history` ...
+ 2026-03-12 16:33:42 INFO  o.f.core.internal.command.DbMigrate - Current version of schema `school9ssr`: << Empty Schema >>
+ 2026-03-12 16:33:42 INFO  o.f.core.internal.command.DbMigrate - Migrating schema `school9ssr` to version "2 - insert regions"
+ 2026-03-12 16:33:42 ERROR o.f.core.internal.command.DbMigrate - Migration of schema `school9ssr` to version "2 - insert regions" failed! Please restore backups and roll back database and code!
+ 2026-03-12 16:33:42 WARN  o.s.w.c.s.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Script V2__insert_regions.sql failed
+------------------------------------
+SQL State  : 42S02
+Error Code : 1146
+Message    : Table 'school9ssr.regions' doesn't exist
+Location   : db/migration/V2__insert_regions.sql (C:\Users\30698\IdeaProjects\schoolapp\build\resources\main\db\migration\V2__insert_regions.sql)
+Line       : 1
+Statement  : INSERT INTO regions (id, name) VALUES
+(1,'ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ'),
+(2,'ΑΤΤΙΚΗΣ'),
+(3,'ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ'),
+(4,'ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ'),
+(5,'ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(6,'ΗΠΕΙΡΟΥ'),
+(7,'ΘΕΣΣΑΛΙΑΣ'),
+(8,'ΙΟΝΙΩΝ ΝΗΣΩΝ'),
+(9,'ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(10,'ΚΡΗΤΗΣ'),
+(11,'ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ'),
+(12,'ΠΕΛΟΠΟΝΝΗΣΟΥ'),
+(13,'ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ')
+
+ 2026-03-12 16:33:43 ERROR o.s.boot.SpringApplication - Application run failed
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Script V2__insert_regions.sql failed
+------------------------------------
+SQL State  : 42S02
+Error Code : 1146
+Message    : Table 'school9ssr.regions' doesn't exist
+Location   : db/migration/V2__insert_regions.sql (C:\Users\30698\IdeaProjects\schoolapp\build\resources\main\db\migration\V2__insert_regions.sql)
+Line       : 1
+Statement  : INSERT INTO regions (id, name) VALUES
+(1,'ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ'),
+(2,'ΑΤΤΙΚΗΣ'),
+(3,'ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ'),
+(4,'ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ'),
+(5,'ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(6,'ΗΠΕΙΡΟΥ'),
+(7,'ΘΕΣΣΑΛΙΑΣ'),
+(8,'ΙΟΝΙΩΝ ΝΗΣΩΝ'),
+(9,'ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(10,'ΚΡΗΤΗΣ'),
+(11,'ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ'),
+(12,'ΠΕΛΟΠΟΝΝΗΣΟΥ'),
+(13,'ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ')
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Script V2__insert_regions.sql failed
+------------------------------------
+SQL State  : 42S02
+Error Code : 1146
+Message    : Table 'school9ssr.regions' doesn't exist
+Location   : db/migration/V2__insert_regions.sql (C:\Users\30698\IdeaProjects\schoolapp\build\resources\main\db\migration\V2__insert_regions.sql)
+Line       : 1
+Statement  : INSERT INTO regions (id, name) VALUES
+(1,'ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ'),
+(2,'ΑΤΤΙΚΗΣ'),
+(3,'ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ'),
+(4,'ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ'),
+(5,'ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(6,'ΗΠΕΙΡΟΥ'),
+(7,'ΘΕΣΣΑΛΙΑΣ'),
+(8,'ΙΟΝΙΩΝ ΝΗΣΩΝ'),
+(9,'ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(10,'ΚΡΗΤΗΣ'),
+(11,'ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ'),
+(12,'ΠΕΛΟΠΟΝΝΗΣΟΥ'),
+(13,'ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ')
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+Caused by: org.flywaydb.core.internal.exception.FlywayMigrateException: Script V2__insert_regions.sql failed
+------------------------------------
+SQL State  : 42S02
+Error Code : 1146
+Message    : Table 'school9ssr.regions' doesn't exist
+Location   : db/migration/V2__insert_regions.sql (C:\Users\30698\IdeaProjects\schoolapp\build\resources\main\db\migration\V2__insert_regions.sql)
+Line       : 1
+Statement  : INSERT INTO regions (id, name) VALUES
+(1,'ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ'),
+(2,'ΑΤΤΙΚΗΣ'),
+(3,'ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ'),
+(4,'ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ'),
+(5,'ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(6,'ΗΠΕΙΡΟΥ'),
+(7,'ΘΕΣΣΑΛΙΑΣ'),
+(8,'ΙΟΝΙΩΝ ΝΗΣΩΝ'),
+(9,'ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(10,'ΚΡΗΤΗΣ'),
+(11,'ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ'),
+(12,'ΠΕΛΟΠΟΝΝΗΣΟΥ'),
+(13,'ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ')
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:399)
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Script V2__insert_regions.sql failed
+------------------------------------
+SQL State  : 42S02
+Error Code : 1146
+Message    : Table 'school9ssr.regions' doesn't exist
+Location   : db/migration/V2__insert_regions.sql (C:\Users\30698\IdeaProjects\schoolapp\build\resources\main\db\migration\V2__insert_regions.sql)
+Line       : 1
+Statement  : INSERT INTO regions (id, name) VALUES
+(1,'ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ'),
+(2,'ΑΤΤΙΚΗΣ'),
+(3,'ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ'),
+(4,'ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ'),
+(5,'ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(6,'ΗΠΕΙΡΟΥ'),
+(7,'ΘΕΣΣΑΛΙΑΣ'),
+(8,'ΙΟΝΙΩΝ ΝΗΣΩΝ'),
+(9,'ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(10,'ΚΡΗΤΗΣ'),
+(11,'ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ'),
+(12,'ΠΕΛΟΠΟΝΝΗΣΟΥ'),
+(13,'ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ')
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:256)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'school9ssr.regions' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+2026-03-12 16:33:43 WARN  o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [gr.aueb.cf.schoolapp.SchoolappApplicationTests@537451d5]
+ java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1e50eb3f testClass = gr.aueb.cf.schoolapp.SchoolappApplicationTests, locations = [], classes = [gr.aueb.cf.schoolapp.SchoolappApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@38f116f6, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@1951b871, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4ba302e0, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@31e4bb20, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@774698ab, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@549949be, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@377eca22], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Script V2__insert_regions.sql failed
+------------------------------------
+SQL State  : 42S02
+Error Code : 1146
+Message    : Table 'school9ssr.regions' doesn't exist
+Location   : db/migration/V2__insert_regions.sql (C:\Users\30698\IdeaProjects\schoolapp\build\resources\main\db\migration\V2__insert_regions.sql)
+Line       : 1
+Statement  : INSERT INTO regions (id, name) VALUES
+(1,'ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ'),
+(2,'ΑΤΤΙΚΗΣ'),
+(3,'ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ'),
+(4,'ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ'),
+(5,'ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(6,'ΗΠΕΙΡΟΥ'),
+(7,'ΘΕΣΣΑΛΙΑΣ'),
+(8,'ΙΟΝΙΩΝ ΝΗΣΩΝ'),
+(9,'ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(10,'ΚΡΗΤΗΣ'),
+(11,'ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ'),
+(12,'ΠΕΛΟΠΟΝΝΗΣΟΥ'),
+(13,'ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ')
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Script V2__insert_regions.sql failed
+------------------------------------
+SQL State  : 42S02
+Error Code : 1146
+Message    : Table 'school9ssr.regions' doesn't exist
+Location   : db/migration/V2__insert_regions.sql (C:\Users\30698\IdeaProjects\schoolapp\build\resources\main\db\migration\V2__insert_regions.sql)
+Line       : 1
+Statement  : INSERT INTO regions (id, name) VALUES
+(1,'ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ'),
+(2,'ΑΤΤΙΚΗΣ'),
+(3,'ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ'),
+(4,'ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ'),
+(5,'ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(6,'ΗΠΕΙΡΟΥ'),
+(7,'ΘΕΣΣΑΛΙΑΣ'),
+(8,'ΙΟΝΙΩΝ ΝΗΣΩΝ'),
+(9,'ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(10,'ΚΡΗΤΗΣ'),
+(11,'ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ'),
+(12,'ΠΕΛΟΠΟΝΝΗΣΟΥ'),
+(13,'ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ')
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+Caused by: org.flywaydb.core.internal.exception.FlywayMigrateException: Script V2__insert_regions.sql failed
+------------------------------------
+SQL State  : 42S02
+Error Code : 1146
+Message    : Table 'school9ssr.regions' doesn't exist
+Location   : db/migration/V2__insert_regions.sql (C:\Users\30698\IdeaProjects\schoolapp\build\resources\main\db\migration\V2__insert_regions.sql)
+Line       : 1
+Statement  : INSERT INTO regions (id, name) VALUES
+(1,'ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ'),
+(2,'ΑΤΤΙΚΗΣ'),
+(3,'ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ'),
+(4,'ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ'),
+(5,'ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(6,'ΗΠΕΙΡΟΥ'),
+(7,'ΘΕΣΣΑΛΙΑΣ'),
+(8,'ΙΟΝΙΩΝ ΝΗΣΩΝ'),
+(9,'ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(10,'ΚΡΗΤΗΣ'),
+(11,'ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ'),
+(12,'ΠΕΛΟΠΟΝΝΗΣΟΥ'),
+(13,'ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ')
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:399)
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Script V2__insert_regions.sql failed
+------------------------------------
+SQL State  : 42S02
+Error Code : 1146
+Message    : Table 'school9ssr.regions' doesn't exist
+Location   : db/migration/V2__insert_regions.sql (C:\Users\30698\IdeaProjects\schoolapp\build\resources\main\db\migration\V2__insert_regions.sql)
+Line       : 1
+Statement  : INSERT INTO regions (id, name) VALUES
+(1,'ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ'),
+(2,'ΑΤΤΙΚΗΣ'),
+(3,'ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ'),
+(4,'ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ'),
+(5,'ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(6,'ΗΠΕΙΡΟΥ'),
+(7,'ΘΕΣΣΑΛΙΑΣ'),
+(8,'ΙΟΝΙΩΝ ΝΗΣΩΝ'),
+(9,'ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ'),
+(10,'ΚΡΗΤΗΣ'),
+(11,'ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ'),
+(12,'ΠΕΛΟΠΟΝΝΗΣΟΥ'),
+(13,'ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ')
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:256)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'school9ssr.regions' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
